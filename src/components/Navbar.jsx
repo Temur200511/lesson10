@@ -10,7 +10,7 @@ const Navbar = () => {
         <img className='w-[200px]' src={headerLogo} alt="" />
       </Link>
       <div className='flex items-center border border-gray-500 p-2'>
-        <input className='outline-none w-[350px]' placeholder='Mahsulot qidirish...' type="text" />
+        <input className='outline-none w-[350px]' placeholder='Search products...' type="text" />
         <SearchOutlined />
       </div>
       <div className='flex gap-10'>

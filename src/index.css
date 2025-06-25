@@ -2,52 +2,62 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@100;200;300;400;500;600;700&display=swap');
 
-/* CarouselComponent.css */
+/* Carousel arrow styles */
 .ant-carousel .slick-prev,
 .ant-carousel .slick-next {
-    z-index: 10 !important;
-    font-size: 24px;
-    /* ikonkaning o‘lchami */
-    color: white;
+  z-index: 10 !important;
+  font-size: 24px;
+  color: white;
+  transition: color 0.3s ease;
+}
 
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-next:hover {
+  color: #ff4d4f; /* subtle red hover for arrows */
 }
 
 .ant-carousel .slick-prev {
-    left: 10px;
+  left: 10px;
 }
 
 .ant-carousel .slick-next {
-    right: 10px;
+  right: 10px;
 }
 
-
-
-/* Nuqtachalarni ustiga chiqarish */
+/* Dot navigation styling */
 .ant-carousel .slick-dots {
   z-index: 100;
   position: absolute;
-  bottom: 10px; /* kerakli joyga ko‘chirasiz */
+  bottom: 10px;
   width: 100%;
   display: flex !important;
   justify-content: center;
+  padding: 0 1rem;
 }
 
 .ant-carousel .slick-dots li button {
-  background: rgba(93, 66, 66, 0.6); /* oq rangli, shaffof */
+  background: rgba(255, 255, 255, 0.5); /* improved contrast */
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  transition: background 0.3s ease;
 }
 
-/* Aktiv (tanlangan) nuqtacha - qizil */
+.ant-carousel .slick-dots li button:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Active dot style */
 .ant-carousel .slick-dots li.slick-active button {
   background: red;
+  transform: scale(1.2);
 }
 
-
+/* Custom fonts */
 .play-font-style {
   font-family: 'Play', sans-serif !important;
 }
 
 .jonas-font-style {
-  font-family: jon;
+  font-family: 'jon', sans-serif; /* made it safer in case "jon" is not a system font */
 }
-
-
